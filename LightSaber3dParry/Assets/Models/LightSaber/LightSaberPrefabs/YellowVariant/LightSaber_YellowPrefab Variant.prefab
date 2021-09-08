@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4018807837639358720
+--- !u!1 &7359600448802533463
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2526931541897929419}
-  - component: {fileID: 2238773320455171702}
-  - component: {fileID: 4570471850770642309}
-  - component: {fileID: 8879941368883789942}
-  - component: {fileID: 3471446240743144156}
-  - component: {fileID: 4309599737142776762}
-  - component: {fileID: 8773330840440819656}
+  - component: {fileID: 7883935088212077293}
+  - component: {fileID: 8842309573252161913}
+  - component: {fileID: 6542070145009465994}
+  - component: {fileID: 2205754933477396345}
+  - component: {fileID: 6163884427970426323}
+  - component: {fileID: 6803056590663589045}
+  - component: {fileID: 2046507965885006023}
+  - component: {fileID: 760695963229541270}
+  - component: {fileID: 6490073321059354432}
+  - component: {fileID: 3144361677354274481}
   m_Layer: 6
-  m_Name: head
+  m_Name: LightSaber_YellowPrefab Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2526931541897929419
+--- !u!4 &7883935088212077293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.40151036, z: 0}
+  m_GameObject: {fileID: 7359600448802533463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0.40151036, z: -5}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1921522397025031622}
-  m_Father: {fileID: 7883935088212077293}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2238773320455171702
+--- !u!33 &8842309573252161913
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   m_Mesh: {fileID: -7070831255929112694, guid: a50e7b4d2fc8d66478fac34d6ebbf41b, type: 3}
---- !u!23 &4570471850770642309
+--- !u!23 &6542070145009465994
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,26 +89,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8879941368883789942
+--- !u!65 &2205754933477396345
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.078905314, y: 1.3098856, z: 0.084175296}
   m_Center: {x: -0.00036180206, y: 0.6536425, z: -0.007934008}
---- !u!54 &3471446240743144156
+--- !u!54 &6163884427970426323
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -115,68 +118,90 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &4309599737142776762
+--- !u!65 &6803056590663589045
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.078905314, y: 1.3098856, z: 3}
   m_Center: {x: -0.00036180206, y: 0.6536425, z: 0}
---- !u!114 &8773330840440819656
+--- !u!114 &2046507965885006023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018807837639358720}
+  m_GameObject: {fileID: 7359600448802533463}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f742c55f25bd47f4e909f74dbc33297f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canCollideEvent: {fileID: 11400000, guid: e1a99bf2e901be84896e4363aa1f5700, type: 2}
-  _cantCollideEvent: {fileID: 11400000, guid: e3a7299e68987cd4183a7497151865d5, type: 2}
   _swordMaxZAngle: 60
   _lightSaberType: 1
   _angleChangeTime: 0.5
-  _fakeCollider: {fileID: 4309599737142776762}
---- !u!1 &7359600448802533463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7883935088212077293}
-  m_Layer: 0
-  m_Name: LightSaber_YellowPrefab Variant
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7883935088212077293
-Transform:
+--- !u!114 &760695963229541270
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7359600448802533463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: -5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2526931541897929419}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0488f3fea6bb7714faf1608fba90dd22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canCollideEvent: {fileID: 11400000, guid: e1a99bf2e901be84896e4363aa1f5700, type: 2}
+  _cantCollideEvent: {fileID: 11400000, guid: e3a7299e68987cd4183a7497151865d5, type: 2}
+--- !u!114 &6490073321059354432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359600448802533463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289bc6ac4ec3cd449a7825eff6a899de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fakeCollider: {fileID: 6803056590663589045}
+  _realCollider: {fileID: 2205754933477396345}
+--- !u!114 &3144361677354274481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359600448802533463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52925332dbfab4244bc4d351be5bd8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gEvent: {fileID: 11400000, guid: bcee7c950ee7bcb498e34a765d5fcb1f, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6490073321059354432}
+        m_TargetAssemblyTypeName: SimulatingSword, Assembly-CSharp
+        m_MethodName: StartSwordSimulation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7575757433736165009
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +231,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.26767358, z: 0}
   m_LocalScale: {x: 1, y: 0.6666667, z: 1}
   m_Children: []
-  m_Father: {fileID: 2526931541897929419}
+  m_Father: {fileID: 7883935088212077293}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2149003014382084725

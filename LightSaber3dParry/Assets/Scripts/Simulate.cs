@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Simulate : MonoBehaviour {
 
-    private void Awake() {
+    [SerializeField] private Event _gEvent;
+
+    private void Start() {
         
 
     }
 
-    private void Start() {
-        
+    public void StartSimulation() {
+
+        _gEvent.Occurred(gameObject);
 
     }
 
