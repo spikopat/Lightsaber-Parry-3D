@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1023406372558606251, guid: cf85675f9588f3247bf602f1851c85c0, type: 3}
+      propertyPath: _swordMaxAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023406372558606251, guid: cf85675f9588f3247bf602f1851c85c0, type: 3}
+      propertyPath: _lightSaberType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023406372558606251, guid: cf85675f9588f3247bf602f1851c85c0, type: 3}
+      propertyPath: _swordMaxZAngle
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2386484373280296911, guid: cf85675f9588f3247bf602f1851c85c0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
