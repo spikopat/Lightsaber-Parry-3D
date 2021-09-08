@@ -2037,10 +2037,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2205754933477396345, guid: b632da01a7a87a744a1a56ab031793f1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7359600448802533463, guid: b632da01a7a87a744a1a56ab031793f1, type: 3}
       propertyPath: m_Name
       value: LightSaber_YellowPrefab Variant
@@ -2144,10 +2140,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4277792430281701918, guid: a099db8fd6e8c5e4da22db8d7ea2b98e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8900542299080414705, guid: a099db8fd6e8c5e4da22db8d7ea2b98e, type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
