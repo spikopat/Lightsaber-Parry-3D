@@ -5,8 +5,6 @@ using DG.Tweening;
 
 public abstract class LightSaberBase : MonoBehaviour{
 
-    public abstract void CheckCollision();
-
     public abstract void SetNewSaberAngle(float _sliderValue);
 
     public abstract void RotateLightSaber(Vector3 _newZAngle);
@@ -19,9 +17,13 @@ public abstract class LightSaberBase : MonoBehaviour{
 
 public class LightSaber : LightSaberBase {
 
+    [SerializeField] private Event _canCollideEvent;
+    [SerializeField] private Event _cantCollideEvent;
     [Header("Set sword's maximum Z angle"), SerializeField, Range(0f, 60f)] private float _swordMaxZAngle;
     [SerializeField] private LightSaberTypes _lightSaberType;
     [SerializeField, Range(0.2f, 2f)] private float _angleChangeTime;
+    [SerializeField] Collider _fakeCollider;
+
     private Sequence _sequence;
 
     public override void SetNewSaberAngle(float _sliderValue) {
@@ -37,15 +39,22 @@ public class LightSaber : LightSaberBase {
             _sequence.Kill();
 
         _sequence = DOTween.Sequence()
-            .Append(transform.DOLocalRotate(_newRotationValue, _angleChangeTime))
-            .OnComplete(() => {
-                CheckCollision();
-            });
+            .Append(transform.DOLocalRotate(_newRotationValue, _angleChangeTime));
+            //.OnUpdate(() => {
+            //    CheckCollision();
+            //});
     }
 
-    public override void CheckCollision() {
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("LightSaber")) {
+            _canCollideEvent.Occurred(gameObject);
+        }
+    }
 
-        //CollisionDetector.Instance.CalculateCollision();
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("LightSaber")) {
+            _cantCollideEvent.Occurred(gameObject);
+        }
     }
 
     private void Start() {
