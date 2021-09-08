@@ -32,8 +32,7 @@ public class LightSaberInteractions : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("LightSaber")) {
-            Debug.Log("Çarptý");
-            SetHitParticlePoint(collision.contacts[0].point);            
+            SetHitParticlePoint(collision.contacts[0].point);
         }
     }
 

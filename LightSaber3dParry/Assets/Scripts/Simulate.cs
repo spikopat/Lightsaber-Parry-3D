@@ -14,7 +14,6 @@ public class Simulate : MonoBehaviour {
     public void StartSimulation() {
 
         _gEvent.Occurred(gameObject);
-
     }
 
 }
