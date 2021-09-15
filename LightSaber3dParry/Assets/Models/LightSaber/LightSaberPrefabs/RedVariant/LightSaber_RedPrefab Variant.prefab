@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2494275601136972204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4725312218857949859}
+  m_Layer: 0
+  m_Name: saberStartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4725312218857949859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494275601136972204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4277792430281701918}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3464980192361701540
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,9 +43,7 @@ GameObject:
   - component: {fileID: 4599129999541313538}
   - component: {fileID: 8900542299080414705}
   - component: {fileID: 3500416516095455067}
-  - component: {fileID: 5205201209949251547}
   - component: {fileID: 5205201210530310242}
-  - component: {fileID: 3012242114973849982}
   - component: {fileID: 8936528616149596142}
   - component: {fileID: 4942931834795129112}
   m_Layer: 6
@@ -38,6 +66,8 @@ Transform:
   m_Children:
   - {fileID: 5520857673265284405}
   - {fileID: 634382169989301181}
+  - {fileID: 4725312218857949859}
+  - {fileID: 435572206028979678}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -99,7 +129,7 @@ BoxCollider:
   m_GameObject: {fileID: 3464980192361701540}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.078905314, y: 1.3098856, z: 0.084175296}
   m_Center: {x: -0.00036180206, y: 0.6536425, z: -0.007934008}
@@ -119,19 +149,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &5205201209949251547
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3464980192361701540}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.078905314, y: 1.3098856, z: 3}
-  m_Center: {x: -0.00036180206, y: 0.6536425, z: 0}
 --- !u!114 &5205201210530310242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,21 +164,9 @@ MonoBehaviour:
   _swordMaxZAngle: 60
   _lightSaberType: 0
   _angleChangeTime: 0.5
---- !u!114 &3012242114973849982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3464980192361701540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0488f3fea6bb7714faf1608fba90dd22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _canCollideEvent: {fileID: 11400000, guid: e1a99bf2e901be84896e4363aa1f5700, type: 2}
-  _cantCollideEvent: {fileID: 11400000, guid: e3a7299e68987cd4183a7497151865d5, type: 2}
-  _hitParticle: {fileID: 721306083315438137}
+  _saberStartTransform: {fileID: 4725312218857949859}
+  _saberStartPosition: {x: 0, y: 0, z: 0}
+  _saberEndTransform: {fileID: 435572206028979678}
 --- !u!114 &8936528616149596142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289bc6ac4ec3cd449a7825eff6a899de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fakeCollider: {fileID: 5205201209949251547}
-  _realCollider: {fileID: 8900542299080414705}
+  _hitParticle: {fileID: 721306083315438137}
 --- !u!114 &4942931834795129112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +291,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6691633375404543895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435572206028979678}
+  m_Layer: 0
+  m_Name: saberEndPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &435572206028979678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691633375404543895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3075, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4277792430281701918}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &631087517125353389
 PrefabInstance:
   m_ObjectHideFlags: 0

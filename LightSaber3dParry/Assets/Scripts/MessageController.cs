@@ -13,22 +13,20 @@ public class MessageController : MonoBehaviour {
         _message = GetComponent<TextMeshProUGUI>();
     }
 
-    //Called by event
+    //Called by CanCollideEvent
     public void SetMessage(string message) {
-
         _message.text = message;
+        Invoke("TurnOff", 0.5f);
     }
 
-    //Called by event
+    //Called by CanCollideEvent
     public void TextBounceAnim() {
-
-        transform.DOScale(1, 0.75f).SetEase(Ease.OutBounce);
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
-    //Called by event
+    //Called by CantCollideEvent
     public void TurnOff() {
-
-        transform.DOScale(0, 0.25f);
+        transform.localScale = Vector3.zero;
     }
 
 }

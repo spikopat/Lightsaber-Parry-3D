@@ -5,9 +5,8 @@ using DG.Tweening;
 
 public class SimulatingSword : MonoBehaviour {
 
-    [SerializeField, Space(10)] Collider _fakeCollider;
-    [SerializeField] Collider _realCollider;
     private Vector3 _initialLocalPosition;
+    [SerializeField] private ParticleSystem _hitParticle;
 
     private void Start() {
 
@@ -17,14 +16,7 @@ public class SimulatingSword : MonoBehaviour {
     //Called by event
     public void StartSwordSimulation() {
 
-        SwitcActiveColliders();
         SwingSwords();
-    }
-
-    private void SwitcActiveColliders() {
-
-        _fakeCollider.enabled = false;
-        _realCollider.enabled = true;
     }
 
     private void SwingSwords() {
@@ -34,6 +26,19 @@ public class SimulatingSword : MonoBehaviour {
             .Append(transform.DOLocalMoveZ(_initialLocalPosition.z, 1f))
             .SetDelay(1f)
             .SetLoops(-1);
+    }
+
+    private void OnCollisionEnter(Collision collision) {
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("LightSaber")) {
+            SetHitParticlePoint(collision.contacts[0].point);
+        }
+    }
+
+    private void SetHitParticlePoint(Vector3 _contactPoint) {
+
+        _hitParticle.transform.position = _contactPoint;
+        _hitParticle.Play();
     }
 
 }

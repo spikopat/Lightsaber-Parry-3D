@@ -18,14 +18,39 @@ public abstract class LightSaberBase : MonoBehaviour{
 public class LightSaber : LightSaberBase {
 
     [Header("Set sword's maximum Z angle"), SerializeField, Range(0f, 60f)] private float _swordMaxZAngle;
+    [Space(10)]
+
     [SerializeField] private LightSaberTypes _lightSaberType;
     [SerializeField, Range(0.2f, 2f)] private float _angleChangeTime;
+
+    [Space(10)]
+    [SerializeField] private Transform _saberStartTransform;
+    [HideInInspector] public Vector3 _saberStartPosition;
+
+    [SerializeField] private Transform _saberEndTransform;
+
 
     private Sequence _sequence;
 
     private void Start() {
 
         _sequence = DOTween.Sequence();
+        _saberStartPosition = GetSaberStartPosition();
+    }
+
+    public Vector3 GetSaberStartPosition() {
+
+        return new Vector3(_saberStartTransform.position.x, _saberStartTransform.position.y, -5);
+    }
+
+    public Vector3 GetSaberEndPosition() {
+
+        return new Vector3(_saberEndTransform.position.x, _saberEndTransform.position.y, -5);
+    }
+
+    public Vector3 GetSaberVector() {
+
+        return GetSaberEndPosition() - GetSaberStartPosition();
     }
 
     public override void SetNewSaberAngle(float _sliderValue) {
